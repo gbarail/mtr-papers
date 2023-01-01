@@ -1,36 +1,50 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "oneOf": [
-    {
-      "type": "object",
-      "$ref": "#/$defs/directory"
-    },
-    {
-      "type": "object",
-      "$ref": "#/$defs/file"
-    }
-  ],
+  "$ref": "#/$defs/entries",
 
   "$defs": {
-    "directory": {
-      "description": "Directory",
+    "entries": {
+      "description": "All entries in a directory",
       "patternProperties": {
-        "^[^/]+/$": {
-          "$ref": "#/$defs/directory"
-        },
-        "^[^/]+$": {
-          "$ref": "#/$defs/file"
+        "^([^/]+|\\./)$": {
+          "description": "File or directory name",
+          "$ref": "#/$defs/entry"
         }
+      },
+      "additionalProperties": false
+    },
+
+    "entry": {
+      "description": "File system entry, either a file or a directory",
+      "if": {
+        "properties": {
+          "./": {
+            "description": "Is a directory",
+            "const": null
+          }
+        },
+        "required": [
+          "./"
+        ]
+      },
+      "then": {
+        "$ref": "#/$defs/directory"
+      },
+      "else": {
+        "$ref": "#/$defs/file"
       }
     },
+
+    "directory": {
+      "description": "Directory",
+      "$ref": "#/$defs/entries"
+    },
+
     "file": {
       "type": "object",
       "description": "File",
       "properties": {
-        "type": {
-          "const": "file"
-        },
         "title": {
           "description": "Paper title",
           "type": "string"

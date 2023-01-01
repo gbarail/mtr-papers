@@ -1,5 +1,6 @@
 ---
-planning-and-design/:
+planning-and-design:
+  ./:
   iicep.1976.3399.pdf:
     title: "Discussion: Planning and Design of the Hong Kong Mass Transit Railway"
     authors:
