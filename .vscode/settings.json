@@ -1,6 +1,7 @@
 {
     "editor.tabSize": 2,
     "yaml.schemas": {
-        "pdf/.schema.json": "pdf/data.yml"
+        "pdf/.schema_metadata.json": "pdf/docs-metadata.yml",
+        "pdf/.schema_sections.json": "pdf/sections.yml"
     },
 }
