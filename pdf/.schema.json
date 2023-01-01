@@ -18,21 +18,23 @@
     "entry": {
       "description": "File system entry, either a file or a directory",
       "if": {
-        "properties": {
-          "./": {
-            "description": "Is a directory",
-            "const": null
-          }
-        },
-        "required": [
-          "./"
-        ]
+        "not": {
+          "properties": {
+            "./": {
+              "description": "Is a directory",
+              "const": null
+            }
+          },
+          "required": [
+            "./"
+          ]
+        }
       },
       "then": {
-        "$ref": "#/$defs/directory"
+        "$ref": "#/$defs/file"
       },
       "else": {
-        "$ref": "#/$defs/file"
+        "$ref": "#/$defs/directory"
       }
     },
 
