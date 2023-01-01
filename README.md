@@ -1,2 +1,1 @@
-# modified-initial-system
-Modified Initial System historical papers
+# MTR historical papers
