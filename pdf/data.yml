@@ -1,7 +1,25 @@
 ---
 planning-and-design:
   iicep.1976.3399.pdf:
-    title: Planning and Design of the Hong Kong Mass Transit Railway
+    title: "Discussion: Planning and Design of the Hong Kong Mass Transit Railway"
     authors:
-      - J. T. Edwards
+      - JT EDWARDS
+      - GB ORORKE
+      - GG KIBBLEWHITE
+      - IM CAMPBELL
+      - KR NORTHGREAVES
+      - PE GARBUTT
+      - GJ EASTON
+      - EG BRENTNALL
+      - J CARTMELL
+      - JFH TYLER
+      - A SAUNDERS
+      - JO TRESSIDER
+      - EH CUTHBERT
+      - B WEX
     doi: https://doi.org/10.1680/iicep.1976.3399
+  iicep.1976.3484.pdf:
+    title: "Planning and Design of the Hong Kong Mass Transit Railway"
+    authors:
+      - JT EDWARDS
+    doi: https://doi.org/10.1680/iicep.1976.3484
