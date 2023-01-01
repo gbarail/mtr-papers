@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "$ref": "#/$defs/directory"
+    },
+    {
+      "type": "object",
+      "$ref": "#/$defs/file"
+    }
+  ],
+
+  "$defs": {
+    "directory": {
+      "description": "Directory",
+      "patternProperties": {
+        "^[^/]+/$": {
+          "$ref": "#/$defs/directory"
+        },
+        "^[^/]+$": {
+          "$ref": "#/$defs/file"
+        }
+      }
+    },
+    "file": {
+      "type": "object",
+      "description": "File",
+      "properties": {
+        "type": {
+          "const": "file"
+        },
+        "title": {
+          "description": "Paper title",
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "description": "Paper authors",
+          "items": {
+            "type": "string"
+          }
+        },
+        "doi": {
+          "type": "string",
+          "description": "DOI"
+        }
+      },
+      "required": ["title", "authors"],
+      "additionalProperties": false
+    }
+  }
+}
