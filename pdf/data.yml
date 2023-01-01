@@ -1,4 +1,23 @@
 ---
+modified-initial-system:
+  ./:
+  iicep.1980.2202.pdf:
+    title: "Hong Kong Mass Transit Railway Modified Initial System: System Planning and Multi-Contract Procedures"
+    authors:
+      - JT EDWARDS
+      - CR COULSON
+      - RA CHANING PEARCE
+    doi: https://doi.org/10.1680/iicep.1980.2202
+  iicep.1980.2203.pdf:
+    title: "Hong Kong Mass Transit Railway Modified Initial System: Design and Construction of Underground Stations and Cut-and-Cover Tunnels"
+    authors:
+      - DF MCINTOSH
+      - M IMAMURA
+      - AJR WALKER
+      - H DOHERTY
+      - DJ EASTWOOD
+    doi: https://doi.org/10.1680/iicep.1980.2203
+
 planning-and-design:
   ./:
   iicep.1976.3399.pdf:
