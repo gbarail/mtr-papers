@@ -1,0 +1,11 @@
+- section: Planning and Design
+  data:
+    - file: data.yml
+      keys:
+        - planning-and-design
+
+- section: Modified Initial System
+  data:
+    - file: data.yml
+      keys:
+        - modified-initial-system

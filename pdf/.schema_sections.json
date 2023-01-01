@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": { "$ref": "#/$def/section" },
+
+  "$def": {
+    "section": {
+      "properties": {
+        "section": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/$def/data"
+        }
+      },
+      "additionalProperties": false
+    },
+    "data": {
+      "description": ".yml / .yaml files and keys",
+      "type": "array",
+      "items": {
+        "$ref": "#/$def/data-item"
+      }
+    },
+    "data-item": {
+      "properties": {
+        "file": {
+          "description": ".yml / .yaml file to read from",
+          "type": "string"
+        },
+        "keys": {
+          "description": "Keys to use within the file. Use \"/\" to denote hierarchies. Each key that is referenced must be a directory or a file.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
