@@ -5,6 +5,11 @@
   "$defs": {
     "entries": {
       "description": "All entries in a directory",
+      "allOf": [
+        {
+          "$ref": "#/$defs/directory-listings"
+        }
+      ],
       "patternProperties": {
         "^([^/]+|\\./)$": {
           "description": "File or directory name",
