@@ -5,6 +5,12 @@
   "$defs": {
     "entries": {
       "description": "All entries in a directory",
+      "type": "object",
+      "properties": {
+        "./": {
+          "$ref": "#/$defs/directory-marker"
+        }
+      },
       "patternProperties": {
         "^([^/]+|\\./)$": {
           "description": "File or directory name",
@@ -26,29 +32,23 @@
       ]
     },
 
+    "directory-marker": {
+      "description": "Directory marker",
+      "const": null
+    },
+
     "directory": {
       "description": "Directory",
       "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "./": {
-              "description": "Directory marker",
-              "const": null
-            }
-          },
-          "required": [
-            "./"
-          ]
-        },
-        {
-          "$ref": "#/$defs/entries"
-        }
+      "$ref": "#/$defs/entries",
+      "required": [
+        "./"
       ]
     },
 
     "file": {
       "description": "File",
+      "type": "object",
       "properties": {
         "title": {
           "description": "Paper title",
