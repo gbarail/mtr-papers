@@ -18,15 +18,7 @@
       "description": "File system entry, either a file or a directory",
       "if": {
         "not": {
-          "properties": {
-            "./": {
-              "description": "Is a directory",
-              "const": null
-            }
-          },
-          "required": [
-            "./"
-          ]
+          "$ref": "#/$defs/directory-listings"
         }
       },
       "then": {
@@ -40,6 +32,18 @@
     "directory": {
       "description": "Directory",
       "$ref": "#/$defs/entries"
+    },
+
+    "directory-listings": {
+      "properties": {
+        "./": {
+          "description": "Is a directory",
+          "const": null
+        }
+      },
+      "required": [
+        "./"
+      ]
     },
 
     "file": {
