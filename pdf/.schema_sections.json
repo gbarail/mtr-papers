@@ -8,6 +8,7 @@
   "$def": {
     "section": {
       "description": "One single section on a webpage, with a table listing all papers to be shown in the section",
+      "type": "object",
       "properties": {
         "section": {
           "description": "Section name",
@@ -29,18 +30,47 @@
     },
 
     "data-item": {
+      "type": "object",
       "properties": {
         "file": {
           "description": ".yml / .yaml file to read from",
           "type": "string"
         },
         "keys": {
-          "description": "Keys to use within the file. Use \"/\" to denote hierarchies. Each key that is referenced must be a directory or a file.",
+          "description": "Keys to use within the file",
           "type": "array",
-          "items": "string"
+          "items": {
+            "$ref": "#/$def/key"
+          }
         }
       },
       "additionalProperties": false
+    },
+
+    "key": {
+      "description": "Either a file or a directory",
+      "oneOf": [
+        {
+          "description": "File",
+          "type": "string"
+        },
+        {
+          "description": "Directory",
+          "type": "object",
+          "patternProperties": {
+            "^[^/]+$": {
+              "description": "Directory",
+              "type": "array",
+              "items": {
+                "$ref": "#/$def/key"
+              }
+            }
+          },
+          "minProperties": 1,
+          "maxProperties": 1,
+          "additionalProperties": false
+        }
+      ]
     }
   }
 }

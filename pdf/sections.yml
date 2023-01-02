@@ -2,10 +2,14 @@
   data:
     - file: data.yml
       keys:
-        - planning-and-design
+        - planning-and-design:
+            - iicep.1976.3399.pdf
+            - iicep.1976.3484.pdf
 
 - section: Modified Initial System
   data:
     - file: data.yml
       keys:
-        - modified-initial-system
+        - modified-initial-system:
+            - iicep.1980.2202.pdf
+            - iicep.1980.2203.pdf
