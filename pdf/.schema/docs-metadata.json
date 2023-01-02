@@ -57,7 +57,9 @@
         "authors": {
           "type": "array",
           "description": "Paper authors",
-          "items": "string"
+          "items": {
+            "type": "string"
+          }
         },
         "doi": {
           "type": "string",
