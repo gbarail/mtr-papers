@@ -1,6 +1,6 @@
 - section: Planning and Design
   data:
-    - file: data.yml
+    - file: docs-metadata.yml
       keys:
         - planning-and-design:
             - iicep.1976.3399.pdf
@@ -8,7 +8,7 @@
 
 - section: Modified Initial System
   data:
-    - file: data.yml
+    - file: docs-metadata.yml
       keys:
         - modified-initial-system:
             - iicep.1980.2202.pdf
