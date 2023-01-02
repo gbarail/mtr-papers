@@ -42,8 +42,18 @@
     "directory-listings": {
       "properties": {
         "./": {
-          "description": "Is a directory",
-          "const": null
+          "description": "Directory listings, required for all directory entries",
+          "oneOf": [
+            {
+              "description": "Use all files and subdirectories in current directory, sorted alphabetically",
+              "const": null
+            },
+            {
+              "description": "Use only specific files and subdirectories",
+              "type": "array",
+              "items": "string"
+            }
+          ]
         }
       },
       "required": [
