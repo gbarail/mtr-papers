@@ -5,11 +5,6 @@
   "$defs": {
     "entries": {
       "description": "All entries in a directory",
-      "allOf": [
-        {
-          "$ref": "#/$defs/directory-listings"
-        }
-      ],
       "patternProperties": {
         "^([^/]+|\\./)$": {
           "description": "File or directory name",
@@ -21,43 +16,34 @@
 
     "entry": {
       "description": "File system entry, either a file or a directory",
-      "if": {
-        "not": {
-          "$ref": "#/$defs/directory-listings"
+      "oneOf": [
+        {
+          "$ref": "#/$defs/directory"
+        },
+        {
+          "$ref": "#/$defs/file"
         }
-      },
-      "then": {
-        "$ref": "#/$defs/file"
-      },
-      "else": {
-        "$ref": "#/$defs/directory"
-      }
+      ]
     },
 
     "directory": {
       "description": "Directory",
-      "$ref": "#/$defs/entries"
-    },
-
-    "directory-listings": {
-      "properties": {
-        "./": {
-          "description": "Directory listings, required for all directory entries",
-          "oneOf": [
-            {
-              "description": "Use all files and subdirectories in current directory, sorted alphabetically",
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "./": {
+              "description": "Directory marker",
               "const": null
-            },
-            {
-              "description": "Use only specific files and subdirectories",
-              "type": "array",
-              "items": "string"
             }
+          },
+          "required": [
+            "./"
           ]
+        },
+        {
+          "$ref": "#/$defs/entries"
         }
-      },
-      "required": [
-        "./"
       ]
     },
 
