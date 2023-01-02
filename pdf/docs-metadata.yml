@@ -17,6 +17,53 @@ modified-initial-system:
       - H DOHERTY
       - DJ EASTWOOD
     doi: https://doi.org/10.1680/iicep.1980.2203
+  iicep.1980.2204.pdf:
+    title: "Hong Kong Mass Transit Railway Modified Initial System: Design and Construction of the Driven Tunnels and the Immersed Tube"
+    authors:
+      - CK HASWELL
+      - FJ HANSEN
+      - RA LANGFIELD
+      - AR UMNEY
+      - FG STOREY
+      - P HALL
+      - GO ARCHER
+    doi: https://doi.org/10.1680/iicep.1980.2204
+  iicep.1980.2205.pdf:
+    title: "Hong Kong Mass Transit Railway Modified Initial System: Design and Construction of Above-Ground Works and Trackwork"
+    authors:
+      - RL TAYLOR
+      - RE COUPERTHWAITE
+      - MJ TAYLOR
+      - WJ GREIG
+    doi: https://doi.org/10.1680/iicep.1980.2205
+  iicep.1981.32616.pdf:
+    title: "Corrigenda. Hong Kong Mass Transit Railway Modified Initial System: System Planning and Multi-Contract Procedures."
+    authors:
+      - JT EDWARDS
+      - CR COULSON
+      - RA CHANINGPEARCE
+    doi: https://doi.org/10.1680/iicep.1981.32616
+  iicep.1982.1752.pdf:
+    title: "8389-8392 Discussion. Hong Kong Mass Transit Railway Modified Initial System."
+    authors:
+      - JT EDWARDS
+      - CR COULSON
+      - R CHANNING PEARCE
+      - DF MCINTOSH
+      - AJR WALKER
+      - DJ EASTWOOD
+      - M IMAMURA
+      - H DOHERTY
+      - CK HASWELL
+      - AR UMNEY
+      - P HALL
+      - FJ HANSEN
+      - FG STOREY
+      - GO ARCHER
+      - RA LANGFIELD
+      - RL TAYLOR
+      - TAYLOR
+    doi: https://doi.org/10.1680/iicep.1982.1752
 
 planning-and-design:
   ./:
