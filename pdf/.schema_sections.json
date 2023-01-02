@@ -1,12 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "array",
-  "items": { "$ref": "#/$def/section" },
+  "items": {
+    "$ref": "#/$def/section"
+  },
 
   "$def": {
     "section": {
+      "description": "One single section on a webpage, with a table listing all papers to be shown in the section",
       "properties": {
         "section": {
+          "description": "Section name",
           "type": "string"
         },
         "data": {
@@ -15,6 +19,7 @@
       },
       "additionalProperties": false
     },
+
     "data": {
       "description": ".yml / .yaml files and keys",
       "type": "array",
@@ -22,6 +27,7 @@
         "$ref": "#/$def/data-item"
       }
     },
+
     "data-item": {
       "properties": {
         "file": {
@@ -31,9 +37,7 @@
         "keys": {
           "description": "Keys to use within the file. Use \"/\" to denote hierarchies. Each key that is referenced must be a directory or a file.",
           "type": "array",
-          "items": {
-            "type": "string"
-          }
+          "items": "string"
         }
       },
       "additionalProperties": false
