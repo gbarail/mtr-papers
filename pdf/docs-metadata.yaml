@@ -1,4 +1,5 @@
----
+# yaml-language-server: $schema=./.schema/docs-metadata.schema.yaml
+
 modified-initial-system:
   ./:
   iicep.1980.2202.pdf:
