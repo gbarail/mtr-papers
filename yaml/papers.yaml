@@ -1,0 +1,138 @@
+# yaml-language-server: $schema=./.schema/papers.schema.yaml
+
+---
+
+- section: Planning and Design
+  papers:
+    '../papers/planning-and-design/iicep.1976.3399.pdf':
+      title: 'Discussion: Planning and Design of the Hong Kong
+        Mass Transit Railway'
+      authors:
+        - JT EDWARDS
+        - GB ORORKE
+        - GG KIBBLEWHITE
+        - IM CAMPBELL
+        - KR NORTHGREAVES
+        - PE GARBUTT
+        - GJ EASTON
+        - EG BRENTNALL
+        - J CARTMELL
+        - JFH TYLER
+        - A SAUNDERS
+        - JO TRESSIDER
+        - EH CUTHBERT
+        - B WEX
+      doi: https://doi.org/10.1680/iicep.1976.3399
+
+    '../papers/planning-and-design/iicep.1976.3484.pdf':
+      title: 'Planning and Design of the Hong Kong Mass Transit Railway'
+      authors:
+        - JT EDWARDS
+      doi: https://doi.org/10.1680/iicep.1976.3484
+
+    '../papers/planning-and-design/j.proeng.2011.07.149.pdf':
+      title: Integrated Team Design Process -
+        Successful Stories of Hong Kong MTR Corporation Projects
+      authors:
+        - CHIN Sai Ping
+        - Clement NGAI Yum Keung
+        - M RAMANATHAN
+      doi: https://doi.org/10.1016/j.proeng.2011.07.149
+
+- section: Modified Initial System
+  papers:
+    '../papers/modified-initial-system/iicep.1980.2202.pdf':
+      title: 'Hong Kong Mass Transit Railway Modified Initial System:
+        System Planning and Multi-Contract Procedures'
+      authors:
+        - JT EDWARDS
+        - CR COULSON
+        - RA CHANING PEARCE
+      doi: https://doi.org/10.1680/iicep.1980.2202
+
+    '../papers/modified-initial-system/iicep.1980.2203.pdf':
+      title: 'Hong Kong Mass Transit Railway Modified Initial System:
+        Design and Construction of Underground Stations
+        and Cut-and-Cover Tunnels'
+      authors:
+        - DF MCINTOSH
+        - M IMAMURA
+        - AJR WALKER
+        - H DOHERTY
+        - DJ EASTWOOD
+      doi: https://doi.org/10.1680/iicep.1980.2203
+
+    '../papers/modified-initial-system/iicep.1980.2204.pdf':
+      title: 'Hong Kong Mass Transit Railway Modified Initial System:
+        Design and Construction of the Driven Tunnels and the Immersed Tube'
+      authors:
+        - CK HASWELL
+        - FJ HANSEN
+        - RA LANGFIELD
+        - AR UMNEY
+        - FG STOREY
+        - P HALL
+        - GO ARCHER
+      doi: https://doi.org/10.1680/iicep.1980.2204
+
+    '../papers/modified-initial-system/iicep.1980.2205.pdf':
+      title: 'Hong Kong Mass Transit Railway Modified Initial System:
+        Design and Construction of Above-Ground Works and Trackwork'
+      authors:
+        - RL TAYLOR
+        - RE COUPERTHWAITE
+        - MJ TAYLOR
+        - WJ GREIG
+      doi: https://doi.org/10.1680/iicep.1980.2205
+
+    '../papers/modified-initial-system/iicep.1981.32616.pdf':
+      title: 'Corrigenda. Hong Kong Mass Transit Railway Modified Initial
+        System: System Planning and Multi-Contract Procedures.'
+      authors:
+        - JT EDWARDS
+        - CR COULSON
+        - RA CHANINGPEARCE
+      doi: https://doi.org/10.1680/iicep.1981.32616
+
+    '../papers/modified-initial-system/iicep.1982.1752.pdf':
+      title: '8389-8392 Discussion: Hong Kong Mass Transit Railway
+        Modified Initial System.'
+      authors:
+        - JT EDWARDS
+        - CR COULSON
+        - R CHANNING PEARCE
+        - DF MCINTOSH
+        - AJR WALKER
+        - DJ EASTWOOD
+        - M IMAMURA
+        - H DOHERTY
+        - CK HASWELL
+        - AR UMNEY
+        - P HALL
+        - FJ HANSEN
+        - FG STOREY
+        - GO ARCHER
+        - RA LANGFIELD
+        - RL TAYLOR
+        - TAYLOR
+      doi: https://doi.org/10.1680/iicep.1982.1752
+
+- section: Urban Development
+  papers:
+    '../papers/urban-development/udi.2010.21.pdf':
+      title: 'An urban island floating on the MTR station: A case study of the
+        West Kowloon development in Hong Kong'
+      authors:
+        - Charlie Q.L. Xue
+        - Hailin Zhai
+        - Joshua Roberts
+      doi: http://dx.doi.org/10.1057/udi.2010.21
+
+    '../papers/urban-development/udi.2012.6.pdf':
+      title: 'Indoor ''Public'' Space: A study of atria in mass transit railway
+        (MTR) complexes of Hong Kong'
+      authors:
+        - Charlie Q.L. Xue
+        - Luming Ma
+        - Ka Chuen Hui
+      doi: http://dx.doi.org/10.1057/udi.2012.6
