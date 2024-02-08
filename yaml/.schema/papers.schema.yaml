@@ -1,5 +1,7 @@
 # yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
 
+---
+
 $schema: https://json-schema.org/draft/2020-12/schema
 
 description: MTR papers by sections
@@ -20,7 +22,8 @@ $defs:
         type: object
         patternProperties:
           ".+":
-            description: Path to the paper. If it is a relative path, it is relative to the path of the `papers.yaml` file.
+            description: Path to the paper. If it is a relative path,
+              it is relative to the path of the `papers.yaml` file.
             $ref: '#/$defs/paper'
     additionalProperties: false
 
