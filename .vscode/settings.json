@@ -1,6 +1,3 @@
 {
-    "editor.tabSize": 2,
-    "yaml.schemas": {
-        "pdf/.schema/sections.json": "pdf/sections.yml"
-    },
+    "editor.tabSize": 2
 }
