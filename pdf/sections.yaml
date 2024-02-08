@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=./.schema/sections.schema.yaml
+
+- section: Planning and Design
+  data:
+  - file: docs-metadata.yml
+    keys:
+    - planning-and-design:
+      - iicep.1976.3399.pdf
+      - iicep.1976.3484.pdf
+
+- section: Modified Initial System
+  data:
+  - file: docs-metadata.yml
+    keys:
+    - modified-initial-system:
+      - iicep.1980.2202.pdf
+      - iicep.1980.2203.pdf
+      - iicep.1980.2204.pdf
+      - iicep.1980.2205.pdf
+      - iicep.1981.32616.pdf
+      - iicep.1982.1752.pdf
