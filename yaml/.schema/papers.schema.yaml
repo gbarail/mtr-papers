@@ -25,6 +25,10 @@ $defs:
             description: Path to the paper. If it is a relative path,
               it is relative to the path of the `papers.yaml` file.
             $ref: '#/$defs/paper'
+        minProperties: 1
+      required:
+        - section
+        - papers
     additionalProperties: false
 
   paper:
