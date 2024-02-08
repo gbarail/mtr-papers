@@ -12,4 +12,7 @@ export const buildOptions: BuildOptions = {
   outfile: path.join(jsDistDir, 'index.js'),
 
   bundle: true,
+  loader: {
+    '.yaml': 'text',
+  }
 }
