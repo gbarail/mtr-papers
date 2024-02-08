@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+
+$schema: https://json-schema.org/draft/2020-12/schema
+
+description: MTR papers by sections
+type: array
+items:
+  $ref: '#/$defs/section'
+
+$defs:
+  section:
+    description: One single section of papers
+    type: object
+    properties:
+      section:
+        description: Section name
+        type: string
+      papers:
+        description: Papers in this section
+        type: object
+        patternProperties:
+          ".+":
+            description: Path to the paper. If it is a relative path, it is relative to the path of the `papers.yaml` file.
+            $ref: '#/$defs/paper'
+    additionalProperties: false
+
+  paper:
+    description: A single paper
+    type: object
+    properties:
+      title:
+        description: Paper title
+        type: string
+      authors:
+        description: Paper authors
+        type: array
+        items:
+          type: string
+      doi:
+        type: string
+        description: DOI
+    required:
+      - title
+      - authors
+    additionalProperties: false
