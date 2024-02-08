@@ -30,6 +30,15 @@
         - JT EDWARDS
       doi: https://doi.org/10.1680/iicep.1976.3484
 
+    '../papers/planning-and-design/j.proeng.2011.07.149.pdf':
+      title: Integrated Team Design Process -
+        Successful Stories of Hong Kong MTR Corporation Projects
+      authors:
+        - CHIN Sai Ping
+        - Clement NGAI Yum Keung
+        - M RAMANATHAN
+      doi: https://doi.org/10.1016/j.proeng.2011.07.149
+
 - section: Modified Initial System
   papers:
     '../papers/modified-initial-system/iicep.1980.2202.pdf':
@@ -107,3 +116,23 @@
         - RL TAYLOR
         - TAYLOR
       doi: https://doi.org/10.1680/iicep.1982.1752
+
+- section: Urban Development
+  papers:
+    '../papers/urban-development/udi.2010.21.pdf':
+      title: 'An urban island floating on the MTR station: A case study of the
+        West Kowloon development in Hong Kong'
+      authors:
+        - Charlie Q.L. Xue
+        - Hailin Zhai
+        - Joshua Roberts
+      doi: http://dx.doi.org/10.1057/udi.2010.21
+
+    '../papers/urban-development/udi.2012.6.pdf':
+      title: 'Indoor ''Public'' Space: A study of atria in mass transit railway
+        (MTR) complexes of Hong Kong'
+      authors:
+        - Charlie Q.L. Xue
+        - Luming Ma
+        - Ka Chuen Hui
+      doi: http://dx.doi.org/10.1057/udi.2012.6
