@@ -1,4 +1,8 @@
 {
+	"type": "module",
+	"scripts": {
+		"build": "cd docs && node esbuild.config.js"
+	},
 	"dependencies": {
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
