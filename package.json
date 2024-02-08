@@ -11,6 +11,8 @@
 		"@types/react": "^18.2.55",
 		"@types/react-dom": "^18.2.19",
 		"esbuild": "^0.20.0",
-		"typescript": "^5.3.3"
+		"quicktype-core": "^23.0.81",
+		"typescript": "^5.3.3",
+		"yaml": "^2.3.4"
 	}
 }
