@@ -1,6 +1,7 @@
 {
   "editor.formatOnSaveMode": "file",
   "editor.tabSize": 2,
+  "typescript.preferences.quoteStyle": "single",
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
   },
