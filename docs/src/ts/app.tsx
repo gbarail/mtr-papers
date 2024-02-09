@@ -4,10 +4,10 @@ import { sections } from "./papers";
 export default function App() {
   return (
     <>
-      <nav>
+      <nav className="page__navbar">
         <h1>MTR Papers</h1>
       </nav>
-      <div>
+      <div className="page__content">
         {sections.map(section => <Section key={section.section} section={section}></Section>)}
       </div>
     </>

@@ -1,0 +1,23 @@
+.page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page__navbar {
+  text-align: center;
+  padding: 1em;
+
+  background-color: navy;
+  color: whitesmoke;
+}
+
+.page__content {
+  flex-grow: 1;
+  overflow: auto;
+}
