@@ -1,4 +1,5 @@
 import Paper from './paper';
+import { replacePaperPathPrefix } from './papers';
 import { Section as SectionData } from './types/section';
 
 export default function Section({ section }: { section: SectionData }) {
@@ -9,9 +10,9 @@ export default function Section({ section }: { section: SectionData }) {
     <section>
       <h2>{section.section}</h2>
       <div>
-        {papers.map(([key, paper]) => {
-          const link = key;
-          return <Paper key={key} link={link} paper={paper} />;
+        {papers.map(([link, paper]) => {
+          link = replacePaperPathPrefix(link);
+          return <Paper key={link} link={link} paper={paper} />;
         })}
       </div>
     </section>
