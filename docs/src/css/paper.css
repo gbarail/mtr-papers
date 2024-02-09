@@ -1,0 +1,11 @@
+.page-section__paper {
+  margin: 1em 0;
+  padding: 1em;
+
+  border: 2px solid lightgray;
+  border-radius: 1em;
+}
+
+.page-section__paper:hover {
+  background-color: whitesmoke;
+}

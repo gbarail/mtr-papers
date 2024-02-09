@@ -5,7 +5,7 @@ export default function Paper({ link, paper }: {
   paper: PaperType,
 }) {
   return (
-    <div>
+    <section className="page-section__paper">
       <h3>{paper.title}</h3>
       {paper.authors?.length > 0
         ? <p><strong>Authors:</strong> {paper.authors.join(', ')}</p>
@@ -16,6 +16,6 @@ export default function Paper({ link, paper }: {
       {link
         ? <p><strong><a href={link} target='_blank' rel='noopener noreferrer'>Download paper</a></strong></p>
         : null}
-    </div>
+    </section>
   );
 }

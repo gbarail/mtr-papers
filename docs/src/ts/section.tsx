@@ -7,7 +7,7 @@ export default function Section({ section }: { section: SectionData }) {
   papers.sort(([, a], [, b]) => a.title.localeCompare(b.title));
 
   return (
-    <section>
+    <section className="page-section">
       <h2>{section.section}</h2>
       <div>
         {papers.map(([link, paper]) => {
