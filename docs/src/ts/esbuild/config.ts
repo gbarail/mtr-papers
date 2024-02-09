@@ -1,9 +1,16 @@
 import path from 'node:path';
 
-import { type BuildOptions } from 'esbuild';
+import { type BuildOptions, type Plugin } from 'esbuild';
+import { copy } from 'esbuild-plugin-copy';
 
-export const tsRootDir = path.join(__dirname, '..');
-export const jsDistDir = path.join(__dirname, '../../../dist/js');
+// input directories
+const tsRootDir = path.join(__dirname, '..');
+const papersDir = path.join(__dirname, '../../../../papers');
+
+// output directories
+const distDir = path.join(__dirname, '../../../dist');
+const jsDistDir = path.join(distDir, 'js');
+const papersDistDir = path.join(distDir, 'papers');
 
 export const buildOptions: BuildOptions = {
   entryPoints: [
@@ -14,5 +21,15 @@ export const buildOptions: BuildOptions = {
   bundle: true,
   loader: {
     '.yaml': 'text',
-  }
+  },
+  plugins: [
+    // copy papers
+    copy({
+      assets: {
+        from: `${papersDir}/**/*.pdf`,
+        to: papersDistDir,
+      },
+      watch: true,
+    }),
+  ],
 }
