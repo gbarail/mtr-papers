@@ -6,15 +6,15 @@ export default function Paper({ link, paper }: {
 }) {
   return (
     <section className="page-section__paper">
-      <h3>{paper.title}</h3>
+      <h3 className="paper__header">{paper.title}</h3>
       {paper.authors?.length > 0
-        ? <p><strong>Authors:</strong> {paper.authors.join(', ')}</p>
+        ? <p className="paper__details"><strong>Authors:</strong> {paper.authors.join(', ')}</p>
         : null}
       {paper.doi
-        ? <p><strong>DOI:</strong> <a href={paper.doi} target='_blank' rel='noopener noreferrer'>{paper.doi}</a></p>
+        ? <p className="paper__details"><strong>DOI:</strong> <a href={paper.doi} target='_blank' rel='noopener noreferrer'>{paper.doi}</a></p>
         : null}
       {link
-        ? <p><strong><a href={link} target='_blank' rel='noopener noreferrer'>Download paper</a></strong></p>
+        ? <p className="paper__details"><strong><a href={link} target='_blank' rel='noopener noreferrer'>Download paper</a></strong></p>
         : null}
     </section>
   );

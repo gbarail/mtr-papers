@@ -9,3 +9,11 @@
 .page-section__paper:hover {
   background-color: whitesmoke;
 }
+
+.paper__header {
+  margin: 0.5em 0 1em;
+}
+
+.paper__details {
+  margin: 0.5em 0;
+}
