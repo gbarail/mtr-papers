@@ -9,7 +9,10 @@ export default function Section({ section }: { section: SectionData }) {
     <section>
       <h2>{section.section}</h2>
       <div>
-        {papers.map(([key, paper]) => <Paper key={key} paper={paper} />)}
+        {papers.map(([key, paper]) => {
+          const link = key;
+          return <Paper key={key} link={link} paper={paper} />;
+        })}
       </div>
     </section>
   );

@@ -1,6 +1,9 @@
 import { type Paper as PaperType } from './types/paper';
 
-export default function Paper({ paper }: { paper: PaperType }) {
+export default function Paper({ link, paper }: {
+  link: string,
+  paper: PaperType,
+}) {
   return (
     <div>
       <h3>{paper.title}</h3>
@@ -9,6 +12,9 @@ export default function Paper({ paper }: { paper: PaperType }) {
         : null}
       {paper.doi
         ? <p><strong>DOI:</strong> <a href={paper.doi} target='_blank' rel='noopener noreferrer'>{paper.doi}</a></p>
+        : null}
+      {link
+        ? <p><strong><a href={link} target='_blank' rel='noopener noreferrer'>Download paper</a></strong></p>
         : null}
     </div>
   );
