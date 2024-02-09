@@ -7,5 +7,5 @@ import papersYAML from '../../../yaml/papers.yaml';
 export const sections = parse(papersYAML) as Section[];
 
 export function replacePaperPathPrefix(path: string) {
-  return replacePathPrefix(path, '../papers', '/dist/papers');
+  return replacePathPrefix(path, '../papers', '/papers');
 }
