@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"build": "cd docs/src/ts/main && ts-node esbuild-build.ts"
+		"build": "cd docs/src/ts/main && ts-node esbuild-build.ts",
+		"watch": "cd docs/src/ts/main && ts-node esbuild-watch.ts"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
