@@ -14,7 +14,7 @@ export default function Paper({ link, paper }: {
         ? <p className="paper__details"><strong>DOI:</strong> <a href={paper.doi} target='_blank' rel='noopener noreferrer'>{paper.doi}</a></p>
         : null}
       {link
-        ? <p className="paper__details"><strong><a href={link} target='_blank' rel='noopener noreferrer'>Download paper</a></strong></p>
+        ? <p className="paper__details"><strong><a href={link} target='_blank' rel='noopener noreferrer' className="paper__download-link">Download paper</a></strong></p>
         : null}
     </section>
   );
