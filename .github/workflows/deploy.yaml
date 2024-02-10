@@ -13,9 +13,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:  # Reference: https://github.com/actions/checkout
+  build:
     runs-on: ubuntu-latest
     steps:
+      # Reference: https://github.com/actions/checkout
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -25,7 +26,7 @@ jobs:
         with:
           version: latest
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: pnpm install
 
       - name: Build
@@ -33,24 +34,18 @@ jobs:
           pnpm run clean
           pnpm run build
 
-  # yamllint disable-line rule:line-length
-  upload_artifact:  # Reference: https://github.com/actions/upload-pages-artifact
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+      # Reference: https://github.com/actions/upload-pages-artifact
       - name: Archive artifact
-        run: |
-          cd docs/dist
-          tar -cvf "$RUNNER_TEMP/archive.tar" .
-
+        run: tar -cvf "$RUNNER_TEMP/artifact.tar" -C docs/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: ${{ runner.temp }}/artifact.tar
           if-no-files-found: error
 
   deploy:  # Reference: https://github.com/actions/deploy-pages
-    needs: upload_artifact
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write
