@@ -1,0 +1,57 @@
+# yamllint disable-line rule:line-length
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+---
+
+name: Deploy GitHub Page
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:  # Reference: https://github.com/actions/checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: pnpm install --save-dev
+
+      - name: Build
+        run: |
+          pnpm run clean
+          pnpm run build
+
+  # yamllint disable-line rule:line-length
+  upload_artifact:  # Reference: https://github.com/actions/upload-pages-artifact
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Archive artifact
+        run: |
+          cd docs/dist
+          tar -cvf "$RUNNER_TEMP/archive.tar" .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{ runner.temp }}/artifact.tar
+          if-no-files-found: error
+
+  deploy:  # Reference: https://github.com/actions/deploy-pages
+    needs: upload_artifact
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
