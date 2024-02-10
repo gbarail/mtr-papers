@@ -1,6 +1,7 @@
 {
 	"scripts": {
 		"build": "cd docs/src/ts/main && ts-node esbuild-build.ts",
+		"clean": "rm -rf docs/dist",
 		"serve": "cd docs/src/ts/main && ts-node esbuild-serve.ts"
 	},
 	"dependencies": {
